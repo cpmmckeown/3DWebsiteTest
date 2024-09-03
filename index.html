@@ -22,6 +22,8 @@ img {max-width: 100%;
      
 .parent {
 display: grid;
+position: absolute;
+bottom:17em;
 grid-template-columns: repeat(2, 1fr);
 grid-template-rows: 1fr;
 grid-column-gap: 0px;
@@ -60,7 +62,6 @@ grid-row-gap: 0px;
 
 .contentA {
     font-family: Poppins;
-  padding-top: 2em;
     grid-area: header;
     justify-items: center;
     place-items: center;
@@ -127,7 +128,6 @@ grid-row-gap: 0px;
 .container {
     background-color: white;
     position: relative;
-  bottom: 10vw;
     display: grid;
     grid-template-columns: 32vw 32vw 32vw;
     grid-template-rows: auto;
