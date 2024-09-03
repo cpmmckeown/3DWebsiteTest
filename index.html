@@ -59,7 +59,8 @@ grid-row-gap: 0px;
 }
 
 .contentA {
-    
+    font-family: Poppins;
+  padding-top: 2em;
     grid-area: header;
     justify-items: center;
     place-items: center;
@@ -158,6 +159,9 @@ grid-row-gap: 0px;
     <!-- <model-viewer> HTML element -->
     
         <div class="parallax">
+                      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.22/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/lqK58u1cF9uIni-u/scene.splinecode"></spline-viewer> 
+
           <div class="parent">
             <!--
             <model-viewer style="height:80vh; width:50vw; position:fixed;" src="untitled.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" autoplay>
@@ -166,9 +170,7 @@ grid-row-gap: 0px;
       </div>
        </model-viewer>
             -->
-            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.22/build/spline-viewer.js"></script>
-<spline-viewer url="https://prod.spline.design/lqK58u1cF9uIni-u/scene.splinecode"></spline-viewer> 
-            <!--<div>THIS EMPTY DIV IS A PLACEHOLDER TO MOVE THE TEXT IN THE GRID. Not needed for spline</div>-->
+            <div><!--THIS EMPTY DIV IS A PLACEHOLDER TO MOVE THE TEXT IN THE GRID. Not needed for spline--></div>
             <div class="CoolFont"> <h1>this website is fake</h1> </div>
           </div><!--Ends Parent Grid -->
         </div> <!--Ends Parallel-->
