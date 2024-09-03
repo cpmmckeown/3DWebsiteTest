@@ -16,9 +16,7 @@ img {max-width: 100%;
     object-fit: contain;}
 
 .parallax {
-  /* The image used */
-  background-image: url("main.jpg");
-
+  
   /* Full height */
   height: 100%;
 
@@ -30,9 +28,7 @@ img {max-width: 100%;
 }
 
 .parallaxB {
-  /* The image used */
-  background-image: url("close.jpg");
-
+  
   /* Full height */
   height: 100%;
 
@@ -145,22 +141,28 @@ img {max-width: 100%;
   </head>
   <body style="background-color:#8ACE00">
     <!-- <model-viewer> HTML element -->
-    <model-viewer style="height:60vh; width: 80vw;" src="untitled.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" autoplay>
+    
+        <div class="parallax"><model-viewer style="height:60vh; width: 80vw;" src="untitled.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" autoplay>
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
    
-    </model-viewer> 
-    <script src="script.js"></script>
-    <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
-    <div class="parallax"></div>
+    </model-viewer> </div>
     <div class="container">
         <div class="contentA">My Fake Bakery</div>
         <div class="contentB">This is a fake website</div> <div class="contentC">About a fake bakery</div> <div class="contentD">That doesn't exist</div>
          <div class="image"><img src="hands.jpg"></div> <div class="imagec"><img src="smol.jpg"></div>
         <div class="contentE"></div>
     </div>
-    <div class="parallaxB"></div>
+    <div class="parallaxB"><model-viewer style="height:60vh; width: 80vw;" src="untitled.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" autoplay>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+   
+    </model-viewer> </div>
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+
   </body>
 </html>
