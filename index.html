@@ -5,7 +5,143 @@
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body, html {
+  height: 100%;
+}
+
+img {max-width: 100%;
+    
+    object-fit: contain;}
+
+.parallax {
+  /* The image used */
+  background-image: url("main.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxB {
+  /* The image used */
+  background-image: url("close.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contentA {
+    
+    grid-area: header;
+    justify-items: center;
+    place-items: center;
+    text-align: center;
+    font-size: 4em;
+    font-family: "Poppins";
+  font-weight: 400;
+  font-style: normal;
+  animation-name: myAnimation;
+    animation-duration: 10000ms;
+    animation-fill-mode: forwards;
+}
+.contentB{
+    text-align: center;
+    grid-area: maina;
+    animation-name: myAnimation;
+    animation-duration: 10000ms;
+    animation-fill-mode: forwards;
+    object-fit: contain;
+}
+.contentC{
+    text-align: center;
+    grid-area: mainb;
+    animation-name: myAnimation;
+    animation-duration: 10000ms;
+    animation-fill-mode: forwards;
+}
+.contentD{
+    text-align: center;
+    grid-area: mainc;
+    animation-name: myAnimation;
+    animation-duration: 10000ms;
+    animation-fill-mode: forwards;
+}
+.contentE{
+    text-align: center;
+    grid-area: footer;
    
+}
+.image{
+    position: relative;
+  left: 10vw;
+    text-align: center;
+    justify-self: end;
+    grid-area: image;
+   
+}
+.imageb{
+    text-align: center;
+    justify-self: end;
+    grid-area: imageb;
+   
+}
+.imagec{
+    position: relative;
+  right: 10vw;
+    text-align: center;
+    justify-self: start;
+    grid-area: imagec;
+   
+}
+
+
+.container {
+    background-color: white;
+    padding-top: 5%;
+    position: relative;
+  bottom: 10vw;
+    display: grid;
+    grid-template-columns: 32vw 32vw 32vw;
+    grid-template-rows: auto;
+    row-gap: 5vh;
+    grid-template-areas: 
+    "header header header"
+    "maina mainb mainc"
+    "image . imagec"
+    "footer footer footer";
+}
+@keyframes myAnimation{
+  0%{
+    
+    opacity: 1;
+    transform: rotateY(90deg);
+    
+  }
+  
+  70%{
+    opacity: 0.5;
+    transform: rotateY(0deg);
+  }
+  100%{
+    
+    opacity: 0;
+
+  }
+}
+     </style>
   </head>
   <body style="background-color:#8ACE00">
     <!-- <model-viewer> HTML element -->
@@ -14,9 +150,17 @@
           <div class="update-bar"></div>
       </div>
    
-    </model-viewer>  
+    </model-viewer> 
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <div class="parallax"></div>
+    <div class="container">
+        <div class="contentA">My Fake Bakery</div>
+        <div class="contentB">This is a fake website</div> <div class="contentC">About a fake bakery</div> <div class="contentD">That doesn't exist</div>
+         <div class="image"><img src="hands.jpg"></div> <div class="imagec"><img src="smol.jpg"></div>
+        <div class="contentE"></div>
+    </div>
+    <div class="parallaxB"></div>
   </body>
 </html>
