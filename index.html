@@ -159,28 +159,30 @@ grid-row-gap: 0px;
     <!-- <model-viewer> HTML element -->
     
         <div class="parallax">
-                      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.22/build/spline-viewer.js"></script>
-<spline-viewer url="https://prod.spline.design/lqK58u1cF9uIni-u/scene.splinecode"></spline-viewer> 
-           </div> <!--Ends Parallel-->
-
-          <div class="parent">
-            <!--
-            <model-viewer style="height:80vh; width:50vw; position:fixed;" src="untitled.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" autoplay>
+          <model-viewer style="height:80vh; width:50vw; position:fixed;" src="untitled.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" autoplay>
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
        </model-viewer>
-            -->
+          <!--using spline
+                      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.22/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/lqK58u1cF9uIni-u/scene.splinecode"></spline-viewer> 
+          -->
+           </div> <!--Ends Parallax-->
+
+    <!--This is the grid that goes in front of the 3D element-->
+          <div class="parent">
             <div><!--THIS EMPTY DIV IS A PLACEHOLDER TO MOVE THE TEXT IN THE GRID. Not needed for spline--></div>
             <div class="CoolFont"> <h1>this website is fake</h1> </div>
           </div><!--Ends Parent Grid -->
        
     <div class="container">
-        <div class="contentA">My Fake Bakery</div>
+        <div class="contentA">my fake bakery</div>
         <div class="contentB">this is a fake website</div> <div class="contentC">About a fake bakery</div> <div class="contentD">That doesn't exist</div>
          <div class="image"></div> <div class="imagec"></div>
         <div class="contentE"></div>
     </div>
+    
     <div class="parallaxB"></div>
     <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
